@@ -1,0 +1,18 @@
+# Ignore environment file with API keys
+.env
+
+# Ignore virtual environment directory
+.venv/
+
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+
+# Ignore temporary files and logs
+*.log
+partial_historical_data.csv
+training_data.csv
+
+# Ignore PyCharm project files (optional)
+.idea/
+*.iml

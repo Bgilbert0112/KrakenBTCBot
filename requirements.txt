@@ -1,0 +1,8 @@
+# Run a pip install requirements.txt to install these dependencies
+krakenex
+pandas
+TA-Lib   # Ensure TA-Lib is installed via pip or binary. install via ta-lib.org
+python-dotenv
+pytz
+scikit-learn
+matplotlib
