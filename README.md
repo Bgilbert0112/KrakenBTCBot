@@ -22,10 +22,10 @@ KrakenBot is an automated trading bot for Bitcoin (XXBTZUSD) on the Kraken excha
 
 bash:
 
-git clone https://github.com/yourusername/KrakenBot.git
+git clone https://github.com/bgilbert0112/KrakenBot.git
 cd KrakenBot
 
-2. Set Up Virtual Environment
+### 2. Set Up Virtual Environment
 Create and activate a virtual environment:
 
 bash:
@@ -36,7 +36,7 @@ source .venv/bin/activate  # Linux/Mac
 
 .\venv\Scripts\activate    # Windows
 
-3. Install Dependencies
+### 3. Install Dependencies
 Install required packages from requirements.txt:
 
 bash:
@@ -47,7 +47,7 @@ Note: If TA-Lib isn’t available via pip, install it manually:
 Linux: Download and install the TA-Lib binary from ta-lib.org, then pip install TA-Lib==0.4.28.
 Windows: Use a pre-built wheel or install via conda or binary.
 
-4. Configure Kraken API Credentials
+### 4. Configure Kraken API Credentials
 Create a .env file in the KrakenBot directory:
 
 bash:
@@ -68,13 +68,21 @@ Usage
 Local Testing
 Run the bot manually to test:
 
-bash
+bash:
 
 .venv/bin/python real_time_trading_ml.py  # Linux
 .\venv\Scripts\python real_time_trading_ml.py  # Windows
 Monitor output for trades at $94,800 buys and $96,325.80 sells with 50% balance, holding in neutral RSI ranges.
 
-Contributing:
+### 5. Contributing:
 Fork the repository.
 Create a branch for your changes.
 Submit a pull request with tests and documentation.
+
+### 6. Support the Developer
+
+Love this program? Want to buy me a coffee to support further development? Your support is greatly appreciated! You can send a donation via Bitcoin to the following wallet address:
+
+Bitcoin Wallet: bc1qwgpr8keenl8zggnt2823wpkjmjky5ga8pzuvkd
+
+Thank you for your support!
