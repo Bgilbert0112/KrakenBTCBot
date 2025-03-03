@@ -29,8 +29,8 @@ MACD_SLOW = 26
 MACD_SIGNAL = 9
 EMA_PERIOD = 12
 WINDOW = 12  # Lookback window for local highs/lows (12 hours)
-UPDATE_INTERVAL = 300  # 5 minutes between updates
-TRADE_PERCENT = 0.5  # Use 50% of available balance for buffer
+UPDATE_INTERVAL = 1800  # 30 minutes between updates
+TRADE_PERCENT = 0.4  # Use 40% of available balance for buffer
 
 # Global state
 price_data = pd.DataFrame(columns=["time", "close", "high", "low", "volume"])
@@ -173,7 +173,7 @@ def fetch_prices():
             retries += 1
             print(f"Fetch error ({retries}/{max_retries}): {str(e)}")
             if retries >= max_retries:
-                print("Max retries reached. Pausing fetch for 5 minutes.")
+                print("Max retries reached. Pausing fetch for 30 minutes.")
                 time.sleep(UPDATE_INTERVAL)
                 retries = 0
             time.sleep(10 * retries)
@@ -318,7 +318,7 @@ def predict_signal(df):
 
 
 def execute_trade(signal, price, usd_balance, btc_balance):
-    """Execute a market order on Kraken using 50% of available balance."""
+    """Execute a market order on Kraken using 40% of available balance."""
     if signal == "hold":
         print("⏸️ Holding position.")
         return
