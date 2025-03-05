@@ -29,7 +29,7 @@ MACD_SLOW = 26
 MACD_SIGNAL = 9
 EMA_PERIOD = 12
 WINDOW = 12  # Lookback window for local highs/lows (12 hours)
-UPDATE_INTERVAL = 1800  # 30 minutes between updates
+UPDATE_INTERVAL = 900  # 15 minutes between updates
 TRADE_PERCENT = 0.4  # Use 40% of available balance for buffer
 
 # Global state
@@ -173,7 +173,7 @@ def fetch_prices():
             retries += 1
             print(f"Fetch error ({retries}/{max_retries}): {str(e)}")
             if retries >= max_retries:
-                print("Max retries reached. Pausing fetch for 30 minutes.")
+                print("Max retries reached. Pausing fetch for 15 minutes.")
                 time.sleep(UPDATE_INTERVAL)
                 retries = 0
             time.sleep(10 * retries)
